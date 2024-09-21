@@ -9,6 +9,7 @@ const app = express();
 const uri = 'mongodb+srv://anshrkdk1998:Dksgkp123@zoelweb.xuzat.mongodb.net/?retryWrites=true&w=majority&appName=ZOELWEB';
 const client = new MongoClient(uri);
 
+let carousel;
 let database;
 let categories;
 let solutions;

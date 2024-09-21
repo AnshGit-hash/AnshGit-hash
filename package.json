@@ -11,7 +11,10 @@
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
-    "mongoose": "^8.6.2"
+    "mongoose": "^8.6.2",
+    "express": "^4.21.0",
+    "axios": "^1.7.7",
+    "cors": "^2.8.5"
   },
   "devDependencies": {
     "@types/node": "^22.5.4"

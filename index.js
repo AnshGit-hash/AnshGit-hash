@@ -6,7 +6,7 @@ const { MongoClient } = require('mongodb');
 const apiKey = process.env.apiKey; // Google Maps API Key
 
 const app = express();
-const PORT = process.env.PORT || 3000};
+const PORT = process.env.PORT || 3000;
 const uri = process.env.mongourl;
 const client = new MongoClient(uri);
 

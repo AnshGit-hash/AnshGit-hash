@@ -3,10 +3,11 @@ const cors = require('cors');
 const axios = require('axios');
 const { MongoClient } = require('mongodb');
 
-const apiKey = "AIzaSyA0xMFZ9lxS8CWEkefqcqgJdgnVwt2fonY"; // Google Maps API Key
+const apiKey = process.env.apiKey; // Google Maps API Key
 
 const app = express();
-const uri = 'mongodb+srv://anshrkdk1998:Dksgkp123@zoelweb.xuzat.mongodb.net/?retryWrites=true&w=majority&appName=ZOELWEB';
+const PORT = process.env.PORT || 3000};
+const uri = process.env.mongourl;
 const client = new MongoClient(uri);
 
 let carousel;
@@ -103,7 +104,7 @@ app.get('/getCoordinates', async (req, res) => {
 });
 
 // Start the server and initialize MongoDB connection
-app.listen(3000, async () => {
+app.listen(PORT, async () => {
   await initialize();  // Initialize the MongoDB connection
-  console.log('Server is running on port 3000');
+  console.log('Server is running on port' + PORT);
 });
